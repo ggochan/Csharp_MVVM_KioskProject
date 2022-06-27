@@ -7,18 +7,13 @@
         xmlns:local="clr-namespace:MVVM_Kiosk"
         xmlns:localviewmodel="clr-namespace:MVVM_Kiosk.ViewModels"
         mc:Ignorable="d"
-        ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner" AllowsTransparency="True"
+        ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True"
         Width="800" Height="1200"
         >
     <Window.DataContext>
         <localviewmodel:ViewModel x:Name="vm"/>
     </Window.DataContext>
-  <!-- Behaviors 이용 이벤트
-    <i:Interaction.Triggers>
-        <i:EventTrigger EventName="Loaded">
-            <i:InvokeCommandAction Command="{Binding WindowLoadedCommand}"/>
-        </i:EventTrigger>
-    </i:Interaction.Triggers>-->
+    
     <Grid>
         
     </Grid>
