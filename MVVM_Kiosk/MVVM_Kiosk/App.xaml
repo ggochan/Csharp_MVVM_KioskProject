@@ -2,9 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:MVVM_Kiosk"
-             xmlns:localview="clr-namespace:MVVM_Kiosk.ViewModels"
              StartupUri="Main.xaml">
     <Application.Resources>
-        <localview:WindowViewModel x:Key="myWindowViewmodel"/>
+
     </Application.Resources>
 </Application>

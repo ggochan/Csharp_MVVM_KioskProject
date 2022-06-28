@@ -18,6 +18,9 @@ F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kio
 F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\bin\Debug\Microsoft.Xaml.Behaviors.xml
 F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\obj\Debug\GeneratedInternalTypeHelper.g.cs
-F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\obj\Debug\App.baml
 F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\obj\Debug\MVVM_Kiosk.csproj.CopyComplete
 F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\obj\Debug\MVVM_Kiosk.csprojAssemblyReference.cache
+F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\bin\Debug\FontAwesome.WPF.dll
+F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\bin\Debug\FontAwesome.WPF.xml
+F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\obj\Debug\ResourceDictionarys\Color.baml
+F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\obj\Debug\ResourceDictionarys\Toolbar_Resource.baml
