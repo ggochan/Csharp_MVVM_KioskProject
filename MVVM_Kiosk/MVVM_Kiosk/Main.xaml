@@ -5,42 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:local="clr-namespace:MVVM_Kiosk"
-        xmlns:localviewmodel="clr-namespace:MVVM_Kiosk.ViewModels"
+        xmlns:View="clr-namespace:MVVM_Kiosk.View"
+        xmlns:Viewmodels="clr-namespace:MVVM_Kiosk.ViewModels"
         mc:Ignorable="d"
         ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True"
         Width="800" Height="1000"
+        Loaded="Window_Loaded"
         >
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/ResourceDictionarys/Toolbar_Resource.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
+
     <Window.DataContext>
-        <localviewmodel:ViewModel x:Name="vm"/>
+        <Viewmodels:ViewModel x:Name="vm"/>
     </Window.DataContext>
-    
-    <Grid>
+
+    <Grid Background="{StaticResource Brush_WhiteSmoke}">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="550*"/>
-            <RowDefinition Height="350"/>
+            <RowDefinition Height="630*"/>
+            <RowDefinition Height="270"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel Style="{StaticResource Toolbar_sp}">
                 <Button Style="{StaticResource Toolbar_Left_btn}">
                     <fa:ImageAwesome Icon="Home" Style="{StaticResource Toolbar_Left_btn_Icon}"/>
                 </Button>
-                <Button Style="{StaticResource Toolbar_Center_btn}"/>
-                <Button Style="{StaticResource Toolbar_Right_btn}"/>
+                <Button Style="{StaticResource Toolbar_Center_btn}" Command="{x:Static Viewmodels:ViewModel.WindowCloseCmd}"/>
+                <Button Style="{StaticResource Toolbar_Right_btn}"  Command="{x:Static Viewmodels:ViewModel.EnKoCmd}" Content="{Binding EnKo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
-
+           <!-- Left Right btn = chevron-left, right -->
+           <!-- 틀잡기용 그리드 -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="81"/>
+                <RowDefinition Height="22"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="32"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.ColumnSpan="3" Background="LightBlue"></StackPanel>
+            <ItemsControl x:Name="Main_Menu" ItemsSource="{Binding Menu_}" Grid.Column="1" Grid.Row="2" AlternationCount="1">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <View:MenuButton/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            
+            <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label>
+                    <fa:ImageAwesome Icon="Circle" Foreground="LightGray" Width="15" Height="15" Margin="3 0"/>
+                </Label>
+                <Label>
+                    <fa:ImageAwesome Icon="Circle" Foreground="LightGray" Width="15" Height="15" Margin="3 0"/>
+                </Label>
+                <Label>
+                    <fa:ImageAwesome Icon="Circle" Foreground="LightGray" Width="15" Height="15" Margin="3 0"/>
+                </Label>
+            </StackPanel>
         </Grid>
-        <Grid Grid.Row="2">
-
+        <Grid Grid.Row="2" >
+            <StackPanel Background="LightCoral"/>
         </Grid>
     </Grid>
 </Window>

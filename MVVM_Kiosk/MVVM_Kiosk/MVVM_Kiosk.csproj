@@ -65,9 +65,13 @@
     <Compile Include="CustomViews\MenuButton.xaml.cs">
       <DependentUpon>MenuButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ImageConverter.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
+    <Compile Include="View\MenuButton.xaml.cs">
+      <DependentUpon>MenuButton.xaml</DependentUpon>
+    </Compile>
     <Page Include="CustomViews\MenuButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,11 +89,15 @@
       <DependentUpon>Main.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ResourceDictionarys\Color.xaml">
+    <Page Include="ResourceDictionarys\Color_Font.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ResourceDictionarys\Toolbar_Resource.xaml">
+    <Page Include="ResourceDictionarys\ResourceStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MenuButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,7 +136,16 @@
     <Resource Include="Resources\커피상표.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\" />
+    <None Include="Resources\%28ICE%29아메리카노.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28HOT%29아메리카노.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\메가초코프라페.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\자몽에이드.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

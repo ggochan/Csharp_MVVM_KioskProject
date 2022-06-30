@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:MVVM_Kiosk"
              StartupUri="Main.xaml">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionarys/ResourceStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

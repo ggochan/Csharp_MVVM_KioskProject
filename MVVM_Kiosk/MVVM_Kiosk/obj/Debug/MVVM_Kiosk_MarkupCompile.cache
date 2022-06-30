@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 F:\project\Csharp_MVVM_KioskProject\Csharp_MVVM_KioskProject\MVVM_Kiosk\MVVM_Kiosk\App.xaml
-4-1940725821
+5-282940792
 
-13607148653
+15374284080
 16-1366049410
-CustomViews\MenuButton.xaml;Main.xaml;ResourceDictionarys\Color.xaml;ResourceDictionarys\Toolbar_Resource.xaml;
+CustomViews\MenuButton.xaml;Main.xaml;ResourceDictionarys\Color_Font.xaml;ResourceDictionarys\ResourceStyle.xaml;View\MenuButton.xaml;
 
 False
 

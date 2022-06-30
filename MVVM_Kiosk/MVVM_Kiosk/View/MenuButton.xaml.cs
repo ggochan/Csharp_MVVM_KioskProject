@@ -13,22 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MVVM_Kiosk
+namespace MVVM_Kiosk.View
 {
     /// <summary>
-    /// Main.xaml에 대한 상호 작용 논리
+    /// MenuButton.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class Main : Window
+    public partial class MenuButton : UserControl
     {
-        public Main()
+        public MenuButton()
         {
             InitializeComponent();
-
-            if (vm.CloseAction == null)
-                vm.CloseAction = new Action(() => this.Close());
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void MenuButton_Loaded(object sender, RoutedEventArgs e)
         {
             bool designTime = System.ComponentModel.DesignerProperties.GetIsInDesignMode(new DependencyObject());
             if (designTime)

@@ -2,18 +2,19 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:fa="http://schemas.fontawesome.io/icons/"
                     >
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="Color.xaml"/>
-    </ResourceDictionary.MergedDictionaries>
 
-    <!--#region Toolbar-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ResourceDictionarys/Color_Font.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <!--#region Toolbar View-->
     <!-- Toolbar -->
     <Style x:Key="Toolbar_sp" TargetType="StackPanel">
         <Setter Property="Background" Value="{StaticResource Brush_Black}"/>
         <Setter Property="Orientation" Value="Horizontal"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
-    <!--Toolbar Left Btn-->    
+    <!--Toolbar Left Btn-->
+
     <Style x:Key="Toolbar_Left_btn" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource Brush_Black}"/>
         <Setter Property="Foreground" Value="{StaticResource Brush_White}"/>
@@ -35,7 +36,7 @@
         <Setter Property="Width" Value="50"/>
         <Setter Property="Height" Value="50"/>
     </Style>
-    
+
     <!--Toolbar Center Btn-->
     <Style x:Key="Toolbar_Center_btn" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource Brush_Trans}"/>
@@ -62,6 +63,41 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Content" Value="EN"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Main View-->
+    <!--MenuButton Style-->
+
+    <Style x:Key="Main_Menu_btn_Image" TargetType="Image">
+        <Setter Property="Width" Value="144"/>
+        <Setter Property="Height" Value="94"/>
+    </Style>
+
+    <Style x:Key="Main_Menu_btn_Bar" TargetType="StackPanel">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="2"/>
+        <Setter Property="Margin" Value="0 0 0 3"/>
+        <Setter Property="Background" Value="{StaticResource Brush_LightGray}"/>
+    </Style>
+
+    <Style x:Key="Main_Menu_btn_Tb1" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="맑은고딕"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="Main_Menu_btn_Tb2" BasedOn="{StaticResource Main_Menu_btn_Tb1}" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource Brush_LightRed}"/>
     </Style>
     <!--#endregion-->
 </ResourceDictionary>

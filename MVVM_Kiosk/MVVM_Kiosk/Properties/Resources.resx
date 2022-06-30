@@ -118,6 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_HOT_아메리카노" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\(HOT)아메리카노.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_ICE_아메리카노" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\(ICE)아메리카노.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="메가초코프라페" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\메가초코프라페.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="자몽에이드" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\자몽에이드.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="커피상표" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\커피상표.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
