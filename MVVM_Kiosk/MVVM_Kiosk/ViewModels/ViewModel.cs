@@ -40,9 +40,11 @@ namespace MVVM_Kiosk.ViewModels
         public static RoutedCommand EnKoCmd = new RoutedCommand("EnKoCmd", typeof(ApplicationCommands));
         public static RoutedCommand ButtonAddCmd = new RoutedCommand("ButtonAddCmd", typeof(ApplicationCommands));
 
-
         public ObservableCollection<Menu> Menu_ { get; set; }
         public ObservableCollection<MenuCounting> MenuCounting { get; set; }
+
+        
+        private List<ImagePath> imagepath;
 
         #region field + Property
         // 총 가격
@@ -67,27 +69,33 @@ namespace MVVM_Kiosk.ViewModels
                 this.OnPropertyChanged("EnKo");
             }
         }
+        // 탭 이름
+        private string[] tab_name { get; set; } = { "시즌메뉴","커피(ICE)", "커피(HOT)", "스무디&프라페","티" };
+        public string[] Tab_Name
+        {
+            get { return this.tab_name; }
+            set
+            {
+                this.tab_name = value;
+                this.OnPropertyChanged("Tab_Name");
+            }
 
+        }
         #endregion
         public ViewModel()
         {
             this.Menu_ = new ObservableCollection<Menu>();
-          
+
+            this.imagepath = new List<ImagePath>(ImageConverter.DirectroyToPathImage());
+            foreach (ImagePath path in imagepath)
+            {
+                this.Menu_.Add(new Menu { Name = path.Image_menu, Price = path.Image_price, Bitmapsoruce = path.Image_bitmap });
+            }
 
             ViewModel.Command.Add(new CommandBinding(ViewModel.WindowCloseCmd, Executed, CanExecuted));
             ViewModel.Command.Add(new CommandBinding(ViewModel.EnKoCmd, Executed, CanExecuted));
             ViewModel.Command.Add(new CommandBinding(ViewModel.ButtonAddCmd, Executed, CanExecuted));
 
-            this.Menu_.Add(new Menu { Name = "아메리카노", Price = 1500 });
-            this.Menu_.Add(new Menu { Name = "카페라떼", Price = 2000 });
-            this.Menu_.Add(new Menu { Name = "녹차라떼", Price = 2500 });
-            this.Menu_.Add(new Menu { Name = "큐브라떼", Price = 3000 });
-            this.Menu_.Add(new Menu { Name = "메가초코프라페", Price = 3500 });
-            this.Menu_.Add(new Menu { Name = "로얄밀크티", Price = 2500 });
-            this.Menu_.Add(new Menu { Name = "고구마라떼", Price = 3000 });
-            this.Menu_.Add(new Menu { Name = "카페모카", Price = 2500 });
-            this.Menu_.Add(new Menu { Name = "티라미수라떼", Price = 3000 });
-            this.Menu_.Add(new Menu { Name = "카라멜 마끼아또", Price = 3000 });
         }
 
         private void CanExecuted(object sender, CanExecuteRoutedEventArgs e)
@@ -125,12 +133,23 @@ namespace MVVM_Kiosk.ViewModels
                 else if ((e.Command as RoutedCommand).Name == "ButtonAddCmd")
                 {
                     Menu menu = e.Parameter as Menu;
-                    
-                    menu.Color_Border = Brushes.Crimson;
-                    menu.Color_Icon = Brushes.Crimson;
+
+                    menu.Btn_Check = ((menu.Btn_Check == true) ? false : true); // Button IsChecked
+
+                    if (menu.Btn_Check == false) // don't click 
+                    {
+                        menu.Color_Border = Brushes.WhiteSmoke;
+                        menu.Color_Icon = Brushes.White;
+                    }
+
+                    else if (menu.Btn_Check == true) // click
+                    {
+                        menu.Color_Border = Brushes.Crimson;
+                        menu.Color_Icon = Brushes.Crimson;
+                    }
+
                 }
             }
-
         }
     }
 }

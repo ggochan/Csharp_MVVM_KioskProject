@@ -67,10 +67,17 @@
     </Compile>
     <Compile Include="ImageConverter.cs" />
     <Compile Include="Models\Menu.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\ViewModel.cs" />
-    <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="View\MenuButton.xaml.cs">
       <DependentUpon>MenuButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TabButton.xaml.cs">
+      <DependentUpon>TabButton.xaml</DependentUpon>
     </Compile>
     <Page Include="CustomViews\MenuButton.xaml">
       <SubType>Designer</SubType>
@@ -101,6 +108,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\TabButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\MenuCounting.cs" />
@@ -109,11 +120,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -121,6 +127,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -136,16 +143,94 @@
     <Resource Include="Resources\커피상표.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\%28ICE%29아메리카노.PNG" />
+    <None Include="Resources\%28ICE%29아메리카노,2000.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\%28HOT%29아메리카노.PNG" />
+    <None Include="Resources\%28HOT%29아메리카노,1500.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\메가초코프라페.PNG" />
+    <None Include="Resources\메가초코프라페,3500.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\자몽에이드.PNG" />
+    <None Include="Resources\자몽에이드,2500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28HOT%29고구마라떼,2500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28HOT%29로얄밀크티,2000.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28HOT%29카페라떼,2000.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28HOT%29티라미수라떼,2500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28ICE%29딸기라떼,3500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28ICE%29슈렉커피라떼,3500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28ICE%29오레오초코라떼,3500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28ICE%29카라멜마끼아또,3000.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28ICE%29카페라떼,2500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28ICE%29카페모카,3000.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28ICE%29큐브라떼,3000.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28ICE%29티라미수라떼,3000.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\딸기요거트스무디,3500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\라임모히또,3000.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\라임에이드,2500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\레임에이드,2500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\망고요거트스무디,3500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\메가에이드,3500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\멜론코코티,3000.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\민트초코크림프라페,4000.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\민트프라페,3500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\블루레몬에이드,2500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\오곡바나나,4000.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\체리콕,3500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\쿠키프라페,3500.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\타로코코티,3000.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

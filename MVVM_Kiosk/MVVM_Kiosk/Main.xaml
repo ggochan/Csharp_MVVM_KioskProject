@@ -20,8 +20,8 @@
     <Grid Background="{StaticResource Brush_WhiteSmoke}">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="630*"/>
-            <RowDefinition Height="270"/>
+            <RowDefinition Height="600*"/>
+            <RowDefinition Height="300"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel Style="{StaticResource Toolbar_sp}">
@@ -41,7 +41,7 @@
                 <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="81"/>
+                <RowDefinition Height="51"/>
                 <RowDefinition Height="22"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="32"/>
@@ -58,6 +58,13 @@
                         <View:MenuButton/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
+                <ItemsControl.Template>
+                    <ControlTemplate>
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                            <ItemsPresenter/>
+                        </ScrollViewer>
+                    </ControlTemplate>
+                </ItemsControl.Template>
             </ItemsControl>
             
             <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">

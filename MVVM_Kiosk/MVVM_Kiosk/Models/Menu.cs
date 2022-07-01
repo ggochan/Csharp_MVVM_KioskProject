@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace MVVM_Kiosk.Models
 {
@@ -15,6 +16,16 @@ namespace MVVM_Kiosk.Models
     /// </summary>
     class Menu : MenuBase
     {
+        // button Ischecked
+        private bool btn_check = false;
+        public bool Btn_Check
+        {
+            get { return this.btn_check; }
+            set { 
+                this.btn_check = value;
+                this.OnPropertyChanged("Btn_Check");
+            }
+        }
         public int In_Count { get; set; } = 1;
 
         // Menu select Border Color
@@ -41,8 +52,17 @@ namespace MVVM_Kiosk.Models
                 this.OnPropertyChanged("Color_Icon");
             }
         }
-
-    
+        // Image BitmapSource
+        private BitmapSource bitmapsoruce_;
+        public BitmapSource Bitmapsoruce
+        {
+            get { return this.bitmapsoruce_; }
+            set
+            {
+                this.bitmapsoruce_ = value;
+                this.OnPropertyChanged("Bitmapsoruce");
+            }
+        }
 
         /* private readonly BrushConverter ColorConverter = new BrushConverter();
 
@@ -59,7 +79,7 @@ namespace MVVM_Kiosk.Models
                  this.color_ = (Brush)this.ColorConverter.ConvertFrom(value);
              }
          }*/
-        
+
         public Menu()
         {
 

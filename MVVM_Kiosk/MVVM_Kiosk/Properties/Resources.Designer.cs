@@ -63,9 +63,9 @@ namespace MVVM_Kiosk.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap _HOT_아메리카노 {
+        internal static System.Drawing.Bitmap _HOT_고구마라떼_2500 {
             get {
-                object obj = ResourceManager.GetObject("_HOT_아메리카노", resourceCulture);
+                object obj = ResourceManager.GetObject("_HOT_고구마라떼_2500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace MVVM_Kiosk.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap _ICE_아메리카노 {
+        internal static System.Drawing.Bitmap _HOT_로얄밀크티_2000 {
             get {
-                object obj = ResourceManager.GetObject("_ICE_아메리카노", resourceCulture);
+                object obj = ResourceManager.GetObject("_HOT_로얄밀크티_2000", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace MVVM_Kiosk.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap 메가초코프라페 {
+        internal static System.Drawing.Bitmap _HOT_아메리카노_1500 {
             get {
-                object obj = ResourceManager.GetObject("메가초코프라페", resourceCulture);
+                object obj = ResourceManager.GetObject("_HOT_아메리카노,1500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,249 @@ namespace MVVM_Kiosk.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap 자몽에이드 {
+        internal static System.Drawing.Bitmap _HOT_카페라떼_2000 {
             get {
-                object obj = ResourceManager.GetObject("자몽에이드", resourceCulture);
+                object obj = ResourceManager.GetObject("_HOT_카페라떼,2000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _HOT_티라미수라떼_2500 {
+            get {
+                object obj = ResourceManager.GetObject("_HOT_티라미수라떼_2500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ICE_딸기라떼_3500 {
+            get {
+                object obj = ResourceManager.GetObject("_ICE_딸기라떼_3500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ICE_슈렉커피라떼_3500 {
+            get {
+                object obj = ResourceManager.GetObject("_ICE_슈렉커피라떼_3500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ICE_아메리카노_2000 {
+            get {
+                object obj = ResourceManager.GetObject("_ICE_아메리카노,2000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ICE_오레오초코라떼_3500 {
+            get {
+                object obj = ResourceManager.GetObject("_ICE_오레오초코라떼_3500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ICE_카라멜마끼아또_3000 {
+            get {
+                object obj = ResourceManager.GetObject("_ICE_카라멜마끼아또_3000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ICE_카페라떼_2500 {
+            get {
+                object obj = ResourceManager.GetObject("_ICE_카페라떼_2500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ICE_카페모카_3000 {
+            get {
+                object obj = ResourceManager.GetObject("_ICE_카페모카_3000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ICE_큐브라떼_3000 {
+            get {
+                object obj = ResourceManager.GetObject("_ICE_큐브라떼_3000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _ICE_티라미수라떼_3000 {
+            get {
+                object obj = ResourceManager.GetObject("_ICE_티라미수라떼_3000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 딸기요거트스무디_3500 {
+            get {
+                object obj = ResourceManager.GetObject("딸기요거트스무디_3500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 라임모히또_3000 {
+            get {
+                object obj = ResourceManager.GetObject("라임모히또_3000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 라임에이드_2500 {
+            get {
+                object obj = ResourceManager.GetObject("라임에이드_2500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 레임에이드_2500 {
+            get {
+                object obj = ResourceManager.GetObject("레임에이드_2500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 망고요거트스무디_3500 {
+            get {
+                object obj = ResourceManager.GetObject("망고요거트스무디_3500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 메가에이드_3500 {
+            get {
+                object obj = ResourceManager.GetObject("메가에이드_3500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 메가초코프라페_3500 {
+            get {
+                object obj = ResourceManager.GetObject("메가초코프라페,3500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 멜론코코티_3000 {
+            get {
+                object obj = ResourceManager.GetObject("멜론코코티_3000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 민트초코크림프라페_4000 {
+            get {
+                object obj = ResourceManager.GetObject("민트초코크림프라페_4000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 민트프라페_3500 {
+            get {
+                object obj = ResourceManager.GetObject("민트프라페_3500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 블루레몬에이드_2500 {
+            get {
+                object obj = ResourceManager.GetObject("블루레몬에이드_2500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 오곡바나나_4000 {
+            get {
+                object obj = ResourceManager.GetObject("오곡바나나_4000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 자몽에이드_2500 {
+            get {
+                object obj = ResourceManager.GetObject("자몽에이드,2500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 체리콕_3500 {
+            get {
+                object obj = ResourceManager.GetObject("체리콕_3500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +346,26 @@ namespace MVVM_Kiosk.Properties {
         internal static System.Drawing.Bitmap 커피상표 {
             get {
                 object obj = ResourceManager.GetObject("커피상표", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 쿠키프라페_3500 {
+            get {
+                object obj = ResourceManager.GetObject("쿠키프라페_3500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 타로코코티_3000 {
+            get {
+                object obj = ResourceManager.GetObject("타로코코티_3000", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
