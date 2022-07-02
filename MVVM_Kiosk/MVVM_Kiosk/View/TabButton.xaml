@@ -11,12 +11,19 @@
         <ResourceDictionary>
             <Style x:Key="Tab_btn" TargetType="ToggleButton">
                 <Setter Property="Width" Value="Auto"/>
-                <Setter Property="Height" Value="51"/>
-                <Setter Property="Content" Value="ING"/>
+                <Setter Property="Height" Value="53"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="ToggleButton">
-                            
+                            <Border
+                                CornerRadius="5 5 0 0"
+                                Background="{Binding Tab_Color}"
+                                BorderThickness="2"
+                                >
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Tab_Name}" Foreground="{Binding Tab_Text_Color}" Margin="15 0 15 0" FontSize="15" FontWeight="SemiBold"/>
+                                </StackPanel>
+                            </Border>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
@@ -24,5 +31,5 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <ToggleButton CommandParameter="{Binding}" Style="{StaticResource Tab_btn}"/>
+    <ToggleButton Command="{x:Static ViewModels:ViewModel.TabAddCmd}" CommandParameter="{Binding}" Style="{StaticResource Tab_btn}"/>
 </UserControl>

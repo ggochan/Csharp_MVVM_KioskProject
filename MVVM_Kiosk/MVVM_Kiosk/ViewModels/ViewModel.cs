@@ -36,16 +36,20 @@ namespace MVVM_Kiosk.ViewModels
 
         public static CommandBindingCollection Command = new CommandBindingCollection();
 
+        // Window Event cmd
         public static RoutedCommand WindowCloseCmd = new RoutedCommand("WindowCloseCmd", typeof(ApplicationCommands));
+        public static RoutedCommand TabWheelCmd = new RoutedCommand("TabWheelCmd", typeof(ApplicationCommands));
+
+        //UI Event cmd
         public static RoutedCommand EnKoCmd = new RoutedCommand("EnKoCmd", typeof(ApplicationCommands));
         public static RoutedCommand ButtonAddCmd = new RoutedCommand("ButtonAddCmd", typeof(ApplicationCommands));
+        public static RoutedCommand TabAddCmd = new RoutedCommand("TabAddCmd", typeof(ApplicationCommands));
 
         public ObservableCollection<Menu> Menu_ { get; set; }
         public ObservableCollection<MenuCounting> MenuCounting { get; set; }
+        public ObservableCollection<TabMenu> TabMenu_ { get; set; }
 
-        
         private List<ImagePath> imagepath;
-
         #region field + Property
         // 총 가격
         private int total_ = 0;
@@ -69,35 +73,50 @@ namespace MVVM_Kiosk.ViewModels
                 this.OnPropertyChanged("EnKo");
             }
         }
-        // 탭 이름
-        private string[] tab_name { get; set; } = { "시즌메뉴","커피(ICE)", "커피(HOT)", "스무디&프라페","티" };
-        public string[] Tab_Name
-        {
-            get { return this.tab_name; }
-            set
-            {
-                this.tab_name = value;
-                this.OnPropertyChanged("Tab_Name");
-            }
-
-        }
         #endregion
         public ViewModel()
         {
             this.Menu_ = new ObservableCollection<Menu>();
+            this.TabMenu_ = new ObservableCollection<TabMenu>();
+
+            Window_Configuration();
+
+            ViewModel.Command.Add(new CommandBinding(ViewModel.WindowCloseCmd, Executed, CanExecuted));
+            ViewModel.Command.Add(new CommandBinding(ViewModel.EnKoCmd, Executed, CanExecuted));
+            ViewModel.Command.Add(new CommandBinding(ViewModel.ButtonAddCmd, Executed, CanExecuted));
+            ViewModel.Command.Add(new CommandBinding(ViewModel.TabAddCmd, Executed, CanExecuted));
+            ViewModel.Command.Add(new CommandBinding(ViewModel.TabWheelCmd, Executed, CanExecuted));
+
+        }
+        private void Window_Configuration()
+        {
+            this.TabMenu_.Add(new TabMenu { Tab_Name = "시즌메뉴", Tab_position = TabMenu_.Count, Tab_Check = true
+            });
+            this.TabMenu_.Add(new TabMenu { Tab_Name = "커피(ICE)", Tab_position = TabMenu_.Count,
+                Tab_Color = new SolidColorBrush(Color.FromRgb(240, 238, 237)),
+                Tab_Text_Color = new SolidColorBrush(Color.FromRgb(54, 54, 54))
+            });
+            this.TabMenu_.Add(new TabMenu { Tab_Name = "커피(HOT)", Tab_position = TabMenu_.Count });
+            this.TabMenu_.Add(new TabMenu { Tab_Name = "스무디&프라페", Tab_position = TabMenu_.Count });
+            this.TabMenu_.Add(new TabMenu { Tab_Name = "티", Tab_position = TabMenu_.Count });
+            this.TabMenu_.Add(new TabMenu { Tab_Name = "------예시-------", Tab_position = TabMenu_.Count });
+            this.TabMenu_.Add(new TabMenu { Tab_Name = "------예시-------", Tab_position = TabMenu_.Count });
+            this.TabMenu_.Add(new TabMenu { Tab_Name = "------예시-------", Tab_position = TabMenu_.Count });
+
+
 
             this.imagepath = new List<ImagePath>(ImageConverter.DirectroyToPathImage());
+
             foreach (ImagePath path in imagepath)
             {
                 this.Menu_.Add(new Menu { Name = path.Image_menu, Price = path.Image_price, Bitmapsoruce = path.Image_bitmap });
             }
 
-            ViewModel.Command.Add(new CommandBinding(ViewModel.WindowCloseCmd, Executed, CanExecuted));
-            ViewModel.Command.Add(new CommandBinding(ViewModel.EnKoCmd, Executed, CanExecuted));
-            ViewModel.Command.Add(new CommandBinding(ViewModel.ButtonAddCmd, Executed, CanExecuted));
+        }
+        private void First_Window()
+        {
 
         }
-
         private void CanExecuted(object sender, CanExecuteRoutedEventArgs e)
         {
 
@@ -105,14 +124,19 @@ namespace MVVM_Kiosk.ViewModels
 
         }
 
-        private void Executed(object sender, ExecutedRoutedEventArgs e)
+        private void Executed(object sender, MouseWheelEventArgs e)
         {
-            if (e.Parameter is MenuCounting)
+            
+        }
+            private void Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            if (e.Parameter is MenuCounting) // 선택된 메뉴
             {
+                
             }
-            else
+            else // 그 외
             {
-                if ((e.Command as RoutedCommand).Name == "WindowCloseCmd")
+                if ((e.Command as RoutedCommand).Name == "WindowCloseCmd") // 창 닫기
                 {
                     btnCount++;
 
@@ -123,12 +147,39 @@ namespace MVVM_Kiosk.ViewModels
                         CloseAction();
                     }
                 }
-                else if ((e.Command as RoutedCommand).Name == "EnKoCmd")
+                else if ((e.Command as RoutedCommand).Name == "EnKoCmd") // 한영
                 {
                     if (this.EnKo == "EN")
                         this.EnKo = "KO";
                     else
                         this.EnKo = "EN";
+                }
+                else if ((e.Command as RoutedCommand).Name == "TabAddCmd") // 탭
+                {
+                    TabMenu tabMenu = e.Parameter as TabMenu;
+
+                    for (int t_cnt = 0; t_cnt < this.TabMenu_.Count-1; t_cnt++)
+                    {
+                        if (this.TabMenu_[t_cnt].Tab_position == tabMenu.Tab_position) // 클릭된 탭 체크
+                        {
+                            this.TabMenu_[t_cnt].Tab_Check = true;
+                        }
+                        else
+                        {
+                            this.TabMenu_[t_cnt].Tab_Check = false;
+                        }
+
+                        if (this.TabMenu_[t_cnt].Tab_Check == false) // don't click 
+                        {
+                            this.TabMenu_[t_cnt].Tab_Color = new SolidColorBrush(Color.FromRgb(54, 54, 54));
+                            this.TabMenu_[t_cnt].Tab_Text_Color = Brushes.White;
+                        }
+                        else // click
+                        {
+                            this.TabMenu_[t_cnt].Tab_Color = new SolidColorBrush(Color.FromRgb(240, 238, 237));
+                            this.TabMenu_[t_cnt].Tab_Text_Color = new SolidColorBrush(Color.FromRgb(54, 54, 54));
+                        }
+                    }
                 }
                 else if ((e.Command as RoutedCommand).Name == "ButtonAddCmd")
                 {

@@ -31,10 +31,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Toolbar_Left_btn_Icon" TargetType="fa:ImageAwesome">
+    <Style x:Key="Toolbar_left_btn_Icon" TargetType="fa:ImageAwesome">
         <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"/>
-        <Setter Property="Width" Value="50"/>
-        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
     </Style>
 
     <!--Toolbar Center Btn-->
@@ -56,12 +56,10 @@
     <Style x:Key="Toolbar_Right_btn" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource Brush_Black}"/>
         <Setter Property="Foreground" Value="{StaticResource Brush_White}"/>
-        <Setter Property="FontSize" Value="30"/>
-        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="Width" Value="100"/>
         <Setter Property="Height" Value="100"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Content" Value="EN"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -72,6 +70,37 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style x:Key="Toolbar_Right_btn_Icon" TargetType="fa:ImageAwesome">
+        <Setter Property="Foreground" Value="{StaticResource Brush_White}"/>
+        <Setter Property="Width" Value="15"/>
+        <Setter Property="Height" Value="15"/>
+    </Style>
+
+    <!--#endregion-->
+    
+    <!--#region Teb View-->
+    <!-- Tab Side Button Style-->
+    <Style x:Key="TabMenu_Side_btn" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource Brush_Black}"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="Height" Value="51"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="TabMenu_Side_Icon" TargetType="fa:ImageAwesome" BasedOn="{StaticResource Toolbar_left_btn_Icon}">
+        <Setter Property="Foreground" Value="{StaticResource Brush_White}"/>
+        <Setter Property="Width" Value="17"/>
+        <Setter Property="Height" Value="17"/>
     </Style>
     <!--#endregion-->
     
